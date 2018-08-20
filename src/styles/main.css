@@ -1,0 +1,17 @@
+.block{
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+}
+.block li{
+    display: block;
+    color: #E6E6E6;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px black;
+    margin: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+}
