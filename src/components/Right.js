@@ -6,23 +6,23 @@ export default class Right extends Component {
     constructor() {
             super();
             this.state = {percentage: 0};
-            this.percentage = 0;
         }
 
         componentDidMount() {
-            const that = this;
-            this.interval = setInterval(() =>
-                this.setState({percentage: ++that.state.percentage}),
-            100);
-            if (that.state.percentage === 100){
-                clearInterval(this.interval);
+            this.interval = setInterval(() => {
+                this.setState({percentage: ++this.state.percentage}),
+                  if (this.state.percentage === 100){
+                  clearInterval(this.interval);
+                    }  
             }
+            100);
+            
 
         }
     render() {
         return (
             <div>
-            {this.state.percentage<=100 && <CircularProgressbar
+            {<CircularProgressbar
                     percentage={this.state.percentage}
                     text={`${this.state.percentage}%`}
                 />}
